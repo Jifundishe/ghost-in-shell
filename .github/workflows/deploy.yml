@@ -1,7 +1,11 @@
 name: Test Workflow
 
 on:
-  push:
+  workflow_dispatch:
+     inputs:
+        github_ref:
+           type: string
+           required: false
           
 jobs:
   build:
@@ -9,4 +13,4 @@ jobs:
     steps:
       - name: Echo Statement
         run: |
-        echo " Test workflow. Deploys nothing."
+          echo " Test workflow. Deploys nothing."
