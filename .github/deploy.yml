@@ -1,7 +1,11 @@
 name: Test Workflow
 
 on:
-  push:
+  workflow_dispatch:
+     inputs:
+        github_ref:
+           type: string
+           required: false
           
 jobs:
   build:
